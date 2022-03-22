@@ -1,5 +1,12 @@
 <template>
-  <small>Product Detail</small>
+  <small>This text is written directly in the vue component</small>
+  <br />
+  <small>{{ exampleText }}</small>
+  <br />
+  <slot />
+
+  <br />
+  <hr />
   <div class="main-product-image">
     <img :src="images[0]" />
   </div>
@@ -19,6 +26,10 @@
 import { computed, ref } from "vue";
 
 const props = defineProps({
+  exampleText: {
+    type: String,
+    required: true,
+  },
   images: {
     type: Array,
     default: () => [],

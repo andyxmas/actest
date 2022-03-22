@@ -23,7 +23,8 @@
   <div class="main-product-wrapper page-width horizontal-padding" vue data-name="Main Product">
 
     <product-detail v-bind="{
-        'images': [
+      'exampleText': 'this text has been passed from the html as a prop',
+      'images': [
           
             '//cdn.shopify.com/s/files/1/0599/4325/6249/products/casual-fashion-woman_925x_b2421cf4-3549-465a-a88f-d1783f87f13b.jpg?v=1643380813&width=720',
           
@@ -60,6 +61,8 @@
         ],
         'initialVariantId': 41847230693561,
       }">
+
+      <small>This text has been passed in as a default slot</small>
 
       <!-- <div class="main-product-image">
           <img
