@@ -3,7 +3,7 @@
   <br />
   <small>{{ exampleText }}</small>
   <br />
-  <slot />
+  <slot name="testslot" />
 
   <br />
   <hr />
