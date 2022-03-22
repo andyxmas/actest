@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+
+  <style>
+    .main-product {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-product-wrapper page-width horizontal-padding" vue data-name="Main Product">
+
+    <product-detail v-bind="{
+        'images': [
+          
+            '//cdn.shopify.com/s/files/1/0599/4325/6249/products/casual-fashion-woman_925x_b2421cf4-3549-465a-a88f-d1783f87f13b.jpg?v=1643380813&width=720',
+          
+            '//cdn.shopify.com/s/files/1/0599/4325/6249/products/1067-500x500.jpg?v=1647632840&width=720',
+          
+            '//cdn.shopify.com/s/files/1/0599/4325/6249/products/505-500x500.jpg?v=1647632864&width=720',
+          
+            '//cdn.shopify.com/s/files/1/0599/4325/6249/products/837-500x500.jpg?v=1647632875&width=720',
+          
+        ],
+        'variants': [
+          
+            {
+              'available': true,
+              'id': 41847230693561,
+              'image': '//cdn.shopify.com/s/files/1/0599/4325/6249/products/1067-500x500.jpg?v=1647632840&width=720',
+              'title': `Small`
+            },
+          
+            {
+              'available': true,
+              'id': 41847230726329,
+              'image': '//cdn.shopify.com/s/files/1/0599/4325/6249/products/505-500x500.jpg?v=1647632864&width=720',
+              'title': `Medium`
+            },
+          
+            {
+              'available': false,
+              'id': 41847230791865,
+              'image': '//cdn.shopify.com/s/files/1/0599/4325/6249/products/837-500x500.jpg?v=1647632875&width=720',
+              'title': `Large`
+            },
+          
+        ],
+        'initialVariantId': 41847230693561,
+      }">
+
+      <!-- <div class="main-product-image">
+          <img
+            src="//cdn.shopify.com/s/files/1/0599/4325/6249/products/casual-fashion-woman_925x_b2421cf4-3549-465a-a88f-d1783f87f13b.jpg?v=1643380813&amp;width=720"
+            alt="Classic Varsity Top"
+            srcset="//cdn.shopify.com/s/files/1/0599/4325/6249/products/casual-fashion-woman_925x_b2421cf4-3549-465a-a88f-d1783f87f13b.jpg?v=1643380813&amp;width=352 352w"
+            width="720" height="480" />
+        </div>
+  
+  
+        <div class="main-product-content">
+          <h1 class="heading-2 main-product-title"> Classic Varsity Top </h1>
+          <div class="main-product-description rich-text">
+            <p>Womens casual varsity top, This grey and black buttoned top is a sport-inspired piece complete with an
+              embroidered letter.</p>
+          </div>
+        </div> -->
+
+    </product-detail>
+  </div>
+
+</body>
+
 </html>
